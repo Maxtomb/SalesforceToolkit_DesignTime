@@ -1,3 +1,3 @@
-var surveyApp = angular.module('surveyApp',[
-'choiceQuestion'                            
+var salesforceApp = angular.module('salesforceApp',[
+'intergrationTab','datacleanTab','specificationTab','aboutTab'                         
 ]);

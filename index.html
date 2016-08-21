@@ -1,4 +1,4 @@
-<html ng-app="surveyApp">
+<html ng-app="salesforceApp">
 
 <head>
 <meta charset="utf-8">
@@ -7,8 +7,14 @@
 <title>Salesforce同步工具</title>
 <script src="bower_components/angular/angular.js"></script>
 <script src="app.module.js"></script>
-<script src="choice-question/choice-question.module.js"></script>
-<script src="choice-question/choice-question-list.component.js"></script>
+<script src="intergration-tab/intergration-tab.module.js"></script>
+<script src="intergration-tab/intergration-tab.component.js"></script>
+<script src="dataclean-tab/dataclean-tab.module.js"></script>
+<script src="dataclean-tab/dataclean-tab.component.js"></script>
+<script src="specification-tab/specification-tab.module.js"></script>
+<script src="specification-tab/specification-tab.component.js"></script>
+<script src="about-tab/about-tab.module.js"></script>
+<script src="about-tab/about-tab.component.js"></script>
 <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -20,6 +26,9 @@
 		</li>
 		<li>
 			<a href="#data_intergration" data-toggle="tab">数据集成</a>
+		</li>
+		<li>
+			<a href="#data_clean" data-toggle="tab">数据清理</a>
 		</li>
 		<li class="dropdown">
 			<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">其他<b class="caret"></b></a>
@@ -34,74 +43,23 @@
 			<p>提供固定格式的json数据,自动插入到salesoforce系统中去</p>
 		</div>
 		<div class="tab-pane fade" id="data_intergration">
-			<form role="form" class="form-horizontal" action="http://localhost:8080/salesforce/tool/sync/records" method="POST">
-				<div class="form-group">
-					<label for="account" class="col-sm-2 control-label">Salesforce帐号:</label>
-					<div class="col-sm-9">
-						<input type="text"
-							name="account" id="account" class="form-control"
-							placeholder="请输入帐号" value="toiklaun@gmail.com" />
-					 </div>
-				</div>
-				<div class="form-group">
-					<label for="password" class="col-sm-2 control-label">Salesforce密码:</label> 
-					<div class="col-sm-9">
-						<input type="password"
-						name="password" id="password" class="form-control"
-						placeholder="请输入密码" value="xiaohei@0" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="token" class="col-sm-2 control-label">Salesforce令牌:</label> 
-					<div class="col-sm-9">
-						<input type="password"
-							name="token" id="token" class="form-control" placeholder="请输入令牌"
-							value="jSixZaFJ5NfJk6XQeWGF8QZ6" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="jsonurl" class="col-sm-2 control-label">JSON数据地址:</label> 
-					<div class="col-sm-9">
-						<input type="text"
-							name="jsonurl" id="jsonurl" class="form-control"
-							placeholder="请输入Json数据地址"
-							value="http://localhost:8081/app/data/records.json" />
-					</div>
-				</div>
-				<div class="form-group">
-      				<div class="col-sm-offset-2 col-sm-10">
-         				<button type="submit" class="btn btn-default">同步</button>
-      				</div>
-   				</div>
-			</form>
+			</br>
+			<intergration-tab></intergration-tab>
+		</div>
+		<div class="tab-pane fade" id="data_clean">
+			</br>
+			<dataclean-tab></dataclean-tab>
 		</div>
 		<div class="tab-pane fade" id="spec">
-			<p>
-				Json例子:</br>
-				{</br>
-				 "TestGreeting__Cloth__c":[</br>
-					{"Name":"jsondata1","TestGreeting__cloth_style__c":"jsonstyle1","TestGreeting__cloth_color__c":"jsoncolor1"},</br>
-					{"Name":"jsondata2","TestGreeting__cloth_style__c":"jsonstyle2","TestGreeting__cloth_color__c":"jsoncolor2"},</br>
-					{"Name":"jsondata3","TestGreeting__cloth_style__c":"jsonstyle3","TestGreeting__cloth_color__c":"jsoncolor3"},</br>
-					{"Name":"jsondata4","TestGreeting__cloth_style__c":"jsonstyle4","TestGreeting__cloth_color__c":"jsoncolor4"},</br>
-					{"Name":"jsondata5","TestGreeting__cloth_style__c":"jsonstyle5","TestGreeting__cloth_color__c":"jsoncolor5"}],</br>
-					
-				 "TestGreeting__SalesManName__c":[</br>
-				 	{"Name":"jsondata1","TestGreeting__sales_phone__c":"12312312321"},</br>
-				 	{"Name":"jsondata2","TestGreeting__sales_phone__c":"12332442242"},]</br>
-					
-				}</br>
-			</p>
+			</br>
+			<specification-tab></specification-tab>
 		</div>
 		<div class="tab-pane fade" id="about">
-				Author: Jerry.Ling </br>
-				Email: toiklaun@gmail.com </br>
-				Company: ibreakingpoint.com </br>
+			</br>
+			<about-tab></about-tab>
 		</div>
 	</div>
-	<!-- <choice-question-list></choice-question-list> -->
 
 </body>
 
-</body>
 </html>

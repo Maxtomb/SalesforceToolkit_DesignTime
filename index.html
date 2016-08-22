@@ -7,6 +7,8 @@
 <title>Salesforce同步工具</title>
 <script src="bower_components/angular/angular.js"></script>
 <script src="app.module.js"></script>
+<script src="jobmanager-tab/jobmanager-tab.module.js"></script>
+<script src="jobmanager-tab/jobmanager-tab.component.js"></script>
 <script src="intergration-tab/intergration-tab.module.js"></script>
 <script src="intergration-tab/intergration-tab.component.js"></script>
 <script src="dataclean-tab/dataclean-tab.module.js"></script>
@@ -40,7 +42,7 @@
 	</ul>
 	<div id="myTabContent" class="tab-content">
 		<div class="tab-pane fade in active" id="home">
-			<p>提供固定格式的json数据,自动插入到salesoforce系统中去</p>
+			<jobmanager-tab></jobmanager-tab>
 		</div>
 		<div class="tab-pane fade" id="data_intergration">
 			</br>

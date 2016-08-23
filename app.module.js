@@ -1,3 +1,3 @@
 var salesforceApp = angular.module('salesforceApp',[
-'jobmanagerTab','intergrationTab','datacleanTab','specificationTab','aboutTab'                         
+'jobmanagerTab','intergrationTab','dockermanageTab','datacleanTab','specificationTab','aboutTab'                         
 ]);

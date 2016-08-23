@@ -11,6 +11,8 @@
 <script src="jobmanager-tab/jobmanager-tab.component.js"></script>
 <script src="intergration-tab/intergration-tab.module.js"></script>
 <script src="intergration-tab/intergration-tab.component.js"></script>
+<script src="dockermanage-tab/dockermanage-tab.module.js"></script>
+<script src="dockermanage-tab/dockermanage-tab.component.js"></script>
 <script src="dataclean-tab/dataclean-tab.module.js"></script>
 <script src="dataclean-tab/dataclean-tab.component.js"></script>
 <script src="specification-tab/specification-tab.module.js"></script>
@@ -20,6 +22,7 @@
 <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<ul id="myTab" class="nav nav-tabs">
@@ -28,6 +31,9 @@
 		</li>
 		<li>
 			<a href="#data_intergration" data-toggle="tab">数据集成</a>
+		</li>
+		<li>
+			<a href="#docker_manage" data-toggle="tab">Docker管理</a>
 		</li>
 		<li>
 			<a href="#data_clean" data-toggle="tab">数据清理</a>
@@ -41,12 +47,17 @@
 		</li>
 	</ul>
 	<div id="myTabContent" class="tab-content">
+		
 		<div class="tab-pane fade in active" id="home">
+			</br>
 			<jobmanager-tab></jobmanager-tab>
 		</div>
 		<div class="tab-pane fade" id="data_intergration">
 			</br>
 			<intergration-tab></intergration-tab>
+		</div>
+		<div class="tab-pane fade" id="docker_manage">
+			<dockermanage-tab></dockermanage-tab>
 		</div>
 		<div class="tab-pane fade" id="data_clean">
 			</br>

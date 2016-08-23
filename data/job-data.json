@@ -1,13 +1,14 @@
 [
               {
-              	"questionNo":"1",
-                "name": "一个和尚挑水喝，两个和尚抬水喝，请问三个和尚会怎样？",
+              	"groupName":"testgroup",
+                "jobName": "TestGreeting__Cloth__c",
+                "nextFireTime":"1231231"
                 
               },
-              
               {
-              	"questionNo":"2",
-                "name": "一个和尚挑水喝，两个和尚抬水喝，请问三个和尚会怎样？",
-                
+              	"groupName":"testgroup",
+                "jobName": "TestGreeting__Family__c",
+                "nextFireTime":"12321312"
               }
 ]
+

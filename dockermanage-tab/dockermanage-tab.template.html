@@ -1,0 +1,20 @@
+
+
+<button class="btn">增加一个container</button>
+<table ng-table="dockertable" class="table" show-filter="true">
+	<tr>
+        <td>ContainerId</td>
+        <td>ContainerName</td>
+        <td>Comment</td>
+    </tr>
+    <tr ng-repeat="x in data">
+        <td title="'groupname'"  sortable="'groupname'">
+            {{x.containerid}}</td>
+        <td title="'jobname'" sortable="'jobname'">
+            {{x.containername}}</td>
+        <td title="'nextfiretime'" sortable="'nextfiretime'">
+            {{x.comment}}</td>
+        <td><button class="btn" type="button" ng-click="remove(x.containerid)">停止</button></td>
+    </tr>
+</table>
+

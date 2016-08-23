@@ -1,12 +1,8 @@
-'use strict';  
 angular.
-	module('jobmanagerTab').
-	component('jobmanagerTab',{
-		templateUrl:'jobmanager-tab/jobmanager-tab.template.html',
+	module('dockermanageTab').
+	component('dockermanageTab',{
+		templateUrl:'dockermanage-tab/dockermanage-tab.template.html',
 		controller:function JobListController($http,$scope) {
-//			http://localhost:8080/salesforce/tool/sync/job
-//			http://localhost:8081/app/data/job-data.json
-			
 			$http({
 				url : "http://localhost:8080/salesforce/tool/sync/job",
 				method : "get",
@@ -16,6 +12,7 @@ angular.
 			}).success(function(da){
 				$scope.data=da;
 			});
+			
 			$scope.remove = function(n){ 
 				$http({
 					url : "http://localhost:8080/salesforce/tool/sync/job",

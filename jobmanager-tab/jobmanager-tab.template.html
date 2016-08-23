@@ -1,4 +1,50 @@
-<p>提供固定格式的json数据,自动插入到salesoforce系统中去</p>
+<!-- <script type="text/javascript">
 
+function getJobList(jsons){
+	var table = document.getElementById("jobTable");
+	var arr = eval(jsons);
+	for(var i=0; i<arr.length; i++){
+		var jsonObj = arr[i]; //获取json对象
+		var tr = table.insertRow(table.rows.length);
+		var td1 = tr.insertCell(0);
+		td1.align = "center";
+		var td2 = tr.insertCell(1);
+		td2.align = "center";
+		var td3 = tr.insertCell(2);
+		td3.align = "center";
 
+		td1.innerHTML = jsonObj.id;
+		td2.innerHTML = jsonObj.name;
+		td3.innerHTML = jsonObj.phone;
+	}
+}
+function pageInit(){
+	var contact = "[{id:1,name:'张三',phone:'12345'},{id:2,name:'张三',phone:'12345'},{id:3,name:'张三',phone:'12345'}]";
+	getJobList(contact);
+}
+</script> -->
+<!--  <table onclick="pageInit();" width="100%" border="0" cellspacing="0" id="jobTable">
+  <tr bgcolor="#339933" style="font-size:18px;FONT-WEIGHT:bold;">
+    <td align="center">GroupName</td>
+    <td align="center">JobName</td>
+    <td align="center">NextFireTime</td>
+  </tr>
+</table> -->
+
+<table ng-table="vm.tableParams" class="table" show-filter="true">
+	<tr>
+        <td>GroupName</td>
+        <td>JobName</td>
+        <td>NextFireTime</td>
+    </tr>
+    <tr ng-repeat="x in data">
+        <td title="'groupname'"  sortable="'groupname'">
+            {{x.groupName}}</td>
+        <td title="'jobname'" sortable="'jobname'">
+            {{x.jobName}}</td>
+        <td title="'nextfiretime'" sortable="'nextfiretime'">
+            {{x.nextFireTime}}</td>
+        <td><button class="btn" type="button" ng-click="remove(x.jobName)">停止</button></td>
+    </tr>
+</table>
 
